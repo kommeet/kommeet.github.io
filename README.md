@@ -1,6 +1,6 @@
 # Kommeet documentation
 
-Attention! Using custom init options overwrite anything chosen in the dashboard!
+**Attention!** Using custom init options overwrite anything chosen in the dashboard! All of these methods, attribures and hacks are subject to change and may be deprecated with one month of notice!
 
 If you find outdated information, think something isn't covered here or want to add some cool trick that you use please
 don't hesitate to [contact us through our chat on our site](https://www.kommeet.com)!
@@ -104,6 +104,32 @@ You can have different teams serving different parts of the site, for example sa
   });
 </script>
 ```
+### Hide the tab
+
+With noTab property you can make the tab invisible on certain sites, if you do not wish to show it to visitors.
+```
+<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<script>
+  Cobrowse.create({
+    apiKey: "LQt/yocAfcWRAt...",
+    noTab: true
+  });
+</script>
+```
+
+### Start chat from different button
+You can start the chat from any button on your site for example with jQuery.click() method.
+In this example we run the "tab click" when we click a button with class `open-chat-button`.
+
+Combinig this and the previous step you can run the chat from any button on your site without the normal start chat button.
+
+```
+  $(function() {
+    $('.open-chat-button').on('click', function() {
+      $('#kommeet-request-cobrowsing').click();
+    });
+  });
+```
 
 ### Online start button
 
@@ -186,7 +212,7 @@ You can insert custom text to offline start button. You can also add any icon fr
 
 #### Offline start button color
 
-You can define the background and text colors of the offline start button by setting the attributes offlineButtonTextColor and offlineButtonTabColor
+You can define the background and text colors of the offline start button by setting the attributes `offlineButtonTextColor` and `offlineButtonTabColor`
 * rgb (rgb(255,255,255))
 * hex (#fff)
 * string (white)
@@ -203,7 +229,7 @@ You can define the background and text colors of the offline start button by set
 ```
 #### Phone number field on contact form
 
-If you wish you can give customers the phonenumber field in contact form by setting the contactPhone boolean.
+If you wish you can give customers the phonenumber field in contact form by setting the `contactPhone` boolean.
 
 ```
 <scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
@@ -211,6 +237,42 @@ If you wish you can give customers the phonenumber field in contact form by sett
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
     contactPhone: true
+  });
+</script>
+```
+
+## Chat box customizations
+
+### Welcome texts
+
+You can set different welcome texts on different pages by using the attribute welcomeTitle and welcomeText.
+
+```
+<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<script>
+  Cobrowse.create({
+    apiKey: "LQt/yocAfcWRAt...",
+    welcomeTitle: 'Hello there!',
+    welcomeText: 'That is a nice looking coat!'
+  });
+</script>
+```
+
+### Agents are busy texts and timing
+
+You can set the timing when the customer will get agents are busy message, this will prevent customers waiting in line for too long. This timer starts when customer sends first message and is cleared when agent joins the session. Use `feedbackButtonDelay` to set the delay to offer `feedbackform` and `maxAgentWaitTime` to force customer to use feedbackform. These timers are in seconds.
+
+You can also customize the message the customer receives.
+
+```
+<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<script>
+  Cobrowse.create({
+    apiKey: "LQt/yocAfcWRAt...",
+    waitingForAgentMsg: 'All of our agents are busy, you can also',
+    waitingForAgentBtn: 'send us a message!',
+    feedbackButtonDelay: 60,
+    maxAgentWaitTime: 120,
   });
 </script>
 ```
