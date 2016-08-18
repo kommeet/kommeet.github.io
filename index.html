@@ -84,6 +84,70 @@ if(language==='en') {
 <p>This will result in usage of finnish language when launching the chat.</p>
 
 <h2>
+<a id="fetchpush-info-from-client-to-agent" class="anchor" href="#fetchpush-info-from-client-to-agent" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fetch/Push info from client to agent</h2>
+
+<p>Currently you can push information such as name or address information. This information will be shown
+in agent as context in userinfo panel. <em>Host address needs to match one of the domain urls in Kommeet service</em></p>
+
+<h4>
+<a id="fetch-info" class="anchor" href="#fetch-info" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fetch info</h4>
+
+<p>Fetching is done with adding options to script.</p>
+
+<pre><code>  uid: {
+    doFetch: true,
+    url: 'https://host/path?args#hash'
+  }
+</code></pre>
+
+<p>And data expected from the fetch is expected to be in form</p>
+
+<pre><code>{
+  name: 'Hemmo Hemminki',
+  url: 'https://host/profile-info-path'
+}
+</code></pre>
+
+<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+&lt;script&gt;
+  Cobrowse.create({
+    apiKey: "LQt/yocAfcWRAt...",
+    uid: {
+      doFetch: true,
+      url: 'https://host/path?args#hash'
+    }
+  });
+&lt;/script&gt;
+</code></pre>
+
+<h4>
+<a id="push-info" class="anchor" href="#push-info" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Push info</h4>
+
+<p>Info can also be pushed with script options in form of</p>
+
+<p><code>uid: 'Hemmo Hemminki'</code> Will result in showing context as a string
+<code>uid: 'https://host/path?args#hash'</code> Will result showing context as a link</p>
+
+<p>Option underneath will result in showing context string as a clickable link</p>
+
+<pre><code>uid: {
+    name: 'Hemmo Hemminki',
+    url: 'https://host/profile-info-path'
+  }
+</code></pre>
+
+<p>Example script:</p>
+
+<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+&lt;script&gt;
+  Cobrowse.create({
+    apiKey: "LQt/yocAfcWRAt...",
+    uid: 'Hemmo Hemminki'
+  });
+&lt;/script&gt;
+</code></pre>
+
+<h2>
 <a id="tab-customization" class="anchor" href="#tab-customization" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tab customization</h2>
 
 <h3>
