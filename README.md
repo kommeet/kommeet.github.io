@@ -48,6 +48,72 @@ Then the init script
 
 This will result in usage of finnish language when launching the chat.
 
+## Fetch/Push info from client to agent
+
+Currently you can push information such as name or address information. This information will be shown
+in agent as context in userinfo panel. *Host address needs to match one of the domain urls in Kommeet service*
+
+#### Fetch info
+Fetching is done with adding options to script.
+
+```
+  uid: {
+    doFetch: true,
+    url: 'https://host/path?args#hash'
+  }
+```
+
+And data expected from the fetch is expected to be in form
+```
+{
+  name: 'Hemmo Hemminki',
+  url: 'https://host/profile-info-path'
+}
+```
+
+
+```
+<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<script>
+  Cobrowse.create({
+    apiKey: "LQt/yocAfcWRAt...",
+    uid: {
+      doFetch: true,
+      url: 'https://host/path?args#hash'
+    }
+  });
+</script>
+```
+
+#### Push info
+
+Info can also be pushed with script options in form of
+
+`uid: 'Hemmo Hemminki'` Will result in showing context as a string
+`uid: 'https://host/path?args#hash'` Will result showing context as a link
+
+
+Option underneath will result in showing context string as a clickable link
+```
+uid: {
+    name: 'Hemmo Hemminki',
+    url: 'https://host/profile-info-path'
+  }
+```
+
+
+Example script:
+```
+<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<script>
+  Cobrowse.create({
+    apiKey: "LQt/yocAfcWRAt...",
+    uid: 'Hemmo Hemminki'
+  });
+</script>
+```
+
+
 ## Tab customization
 
 ### Tab location
