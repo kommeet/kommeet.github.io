@@ -4,11 +4,11 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Kommeet.GitHub.io : ">
+    <meta name="description" content="Kommeet Documentation : ">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Kommeet.GitHub.io</title>
+    <title>Kommeet Documentation</title>
   </head>
 
   <body>
@@ -18,7 +18,7 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/kommeet">View on GitHub</a>
 
-          <h1 id="project_title">Kommeet.GitHub.io</h1>
+          <h1 id="project_title">Kommeet Documentation</h1>
           <h2 id="project_tagline"></h2>
 
         </header>
@@ -30,7 +30,7 @@
         <h1>
 <a id="kommeet-documentation" class="anchor" href="#kommeet-documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Kommeet documentation</h1>
 
-<p>Attention! Using custom init options overwrite anything chosen in the dashboard!</p>
+<p><strong>Attention!</strong> Using custom init options overwrite anything chosen in the dashboard! All of these methods, attribures and hacks are subject to change and may be deprecated with one month of notice!</p>
 
 <p>If you find outdated information, think something isn't covered here or want to add some cool trick that you use please
 don't hesitate to <a href="https://www.kommeet.com">contact us through our chat on our site</a>!</p>
@@ -142,6 +142,35 @@ You can have it popping up in shopping cart after 20 seconds to prevent abandone
 </code></pre>
 
 <h3>
+<a id="hide-the-tab" class="anchor" href="#hide-the-tab" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hide the tab</h3>
+
+<p>With noTab property you can make the tab invisible on certain sites, if you do not wish to show it to visitors.</p>
+
+<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+&lt;script&gt;
+  Cobrowse.create({
+    apiKey: "LQt/yocAfcWRAt...",
+    noTab: true
+  });
+&lt;/script&gt;
+</code></pre>
+
+<h3>
+<a id="start-chat-from-different-button" class="anchor" href="#start-chat-from-different-button" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Start chat from different button</h3>
+
+<p>You can start the chat from any button on your site for example with jQuery.click() method.
+In this example we run the "tab click" when we click a button with class <code>open-chat-button</code>.</p>
+
+<p>Combinig this and the previous step you can run the chat from any button on your site without the normal start chat button.</p>
+
+<pre><code>  $(function() {
+    $('.open-chat-button').on('click', function() {
+      $('#kommeet-request-cobrowsing').click();
+    });
+  });
+</code></pre>
+
+<h3>
 <a id="online-start-button" class="anchor" href="#online-start-button" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Online start button</h3>
 
 <h5>
@@ -230,7 +259,7 @@ by setting hiddenWhenNoAgents boolean.</p>
 <h4>
 <a id="offline-start-button-color" class="anchor" href="#offline-start-button-color" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Offline start button color</h4>
 
-<p>You can define the background and text colors of the offline start button by setting the attributes offlineButtonTextColor and offlineButtonTabColor</p>
+<p>You can define the background and text colors of the offline start button by setting the attributes <code>offlineButtonTextColor</code> and <code>offlineButtonTabColor</code></p>
 
 <ul>
 <li>rgb (rgb(255,255,255))</li>
@@ -251,13 +280,50 @@ by setting hiddenWhenNoAgents boolean.</p>
 <h4>
 <a id="phone-number-field-on-contact-form" class="anchor" href="#phone-number-field-on-contact-form" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Phone number field on contact form</h4>
 
-<p>If you wish you can give customers the phonenumber field in contact form by setting the contactPhone boolean.</p>
+<p>If you wish you can give customers the phonenumber field in contact form by setting the <code>contactPhone</code> boolean.</p>
 
 <pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
 &lt;script&gt;
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
     contactPhone: true
+  });
+&lt;/script&gt;
+</code></pre>
+
+<h2>
+<a id="chat-box-customizations" class="anchor" href="#chat-box-customizations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chat box customizations</h2>
+
+<h3>
+<a id="welcome-texts" class="anchor" href="#welcome-texts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome texts</h3>
+
+<p>You can set different welcome texts on different pages by using the attribute welcomeTitle and welcomeText.</p>
+
+<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+&lt;script&gt;
+  Cobrowse.create({
+    apiKey: "LQt/yocAfcWRAt...",
+    welcomeTitle: 'Hello there!',
+    welcomeText: 'That is a nice looking coat!'
+  });
+&lt;/script&gt;
+</code></pre>
+
+<h3>
+<a id="agents-are-busy-texts-and-timing" class="anchor" href="#agents-are-busy-texts-and-timing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Agents are busy texts and timing</h3>
+
+<p>You can set the timing when the customer will get agents are busy message, this will prevent customers waiting in line for too long. This timer starts when customer sends first message and is cleared when agent joins the session. Use <code>feedbackButtonDelay</code> to set the delay to offer <code>feedbackform</code> and <code>maxAgentWaitTime</code> to force customer to use feedbackform. These timers are in seconds.</p>
+
+<p>You can also customize the message the customer receives.</p>
+
+<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+&lt;script&gt;
+  Cobrowse.create({
+    apiKey: "LQt/yocAfcWRAt...",
+    waitingForAgentMsg: 'All of our agents are busy, you can also',
+    waitingForAgentBtn: 'send us a message!',
+    feedbackButtonDelay: 60,
+    maxAgentWaitTime: 120,
   });
 &lt;/script&gt;
 </code></pre>
