@@ -1,12 +1,12 @@
-# Kommeet documentation
+# Smilee documentation
 
 **Attention!** Using custom init options overwrite anything chosen in the dashboard! All of these methods, attribures and hacks are subject to change and may be deprecated with one month of notice!
 
 If you find outdated information, think something isn't covered here or want to add some cool trick that you use please
-don't hesitate to [contact us through our chat on our site](https://www.kommeet.com)!
+don't hesitate to [contact us through our chat on our site](https://www.smilee.io)!
 
 These options will let you customize the look and feel of the
-Kommeet chat.
+Smilee chat.
 
 ## Language settings
 
@@ -21,7 +21,7 @@ a locale which can be calculated from the address for Example
 * fin
 
 #### Example script to get the Language
-Address used in this example is www.kommeet.com/fi
+Address used in this example is www.smilee.io/fi
 
 ```
 var pathArray=window.location.pathname.split('/');
@@ -37,7 +37,7 @@ if(language==='en') {
 Then the init script
 
 ```
-<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
 <script>
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -51,7 +51,7 @@ This will result in usage of finnish language when launching the chat.
 ## Fetch/Push info from client to agent
 
 Currently you can push information such as name or address information. This information will be shown
-in agent as context in userinfo panel. *Host address needs to match one of the domain urls in Kommeet service*
+in agent as context in userinfo panel. *Host address needs to match one of the domain urls in Smilee service*
 
 #### Fetch info
 Fetching is done with adding options to script.
@@ -73,7 +73,7 @@ And data expected from the fetch is expected to be in form
 
 
 ```
-<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
 <script>
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -104,7 +104,7 @@ uid: {
 
 Example script:
 ```
-<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
 <script>
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -126,7 +126,7 @@ places with supported positions
 * bottom-left
 
 ```
-<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
 <script>
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -138,17 +138,17 @@ places with supported positions
 ### Auto popoup delay
 
 Auto popup can be set to trigger differently on different sites.
-You can have it popping up in shopping cart after 20 seconds to prevent abandonement or you can make it pop up almost instantly when customer arrives to the site. It will pop up only once and if you wish to pop it up again you need to clear kommeet-autoPopupDone from sessionStorage by running
+You can have it popping up in shopping cart after 20 seconds to prevent abandonement or you can make it pop up almost instantly when customer arrives to the site. It will pop up only once and if you wish to pop it up again you need to clear smilee-autoPopupDone from sessionStorage by running
 
 ```
-sessionStorage.removeItem('kommeet-autoPopupDone')
+sessionStorage.removeItem('smilee-autoPopupDone')
 ```
 
 To set the autopopup timeout in seconds use
 
 
 ```
-<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
 <script>
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -162,7 +162,7 @@ To set the autopopup timeout in seconds use
 You can have different teams serving different parts of the site, for example sales team on sales site and support team on support site, just set the team name to context of the script
 
 ```
-<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
 <script>
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -174,7 +174,7 @@ You can have different teams serving different parts of the site, for example sa
 
 With noTab property you can make the tab invisible on certain sites, if you do not wish to show it to visitors.
 ```
-<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
 <script>
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -192,7 +192,7 @@ Combinig this and the previous step you can run the chat from any button on your
 ```
   $(function() {
     $('.open-chat-button').on('click', function() {
-      $('#kommeet-request-cobrowsing').click();
+      $('#smilee-request-cobrowsing').click();
     });
   });
 ```
@@ -204,11 +204,11 @@ Combinig this and the previous step you can run the chat from any button on your
 You can insert custom text to start button. You can also add any icon from [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/)
 
 ```
-<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
 <script>
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
-    startButtonTitle: 'Welcome to Kommeet!',
+    startButtonTitle: 'Welcome to Smilee!',
     startButtonSymbol: ‘<i class="fa fa-envelope"></i>’,
   });
 </script>
@@ -222,7 +222,7 @@ You can define the background and text colors of the start button by setting the
 * string (white)
 
 ```
-<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
 <script>
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -240,7 +240,7 @@ If you don't wish to use offline start button in certain pages you can set the i
 by setting hiddenWhenNoAgents boolean.
 
 ```
-<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
 <script>
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -252,7 +252,7 @@ by setting hiddenWhenNoAgents boolean.
 You can define the offline start button to look different from online start button by setting this boolean value.
 
 ```
-<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
 <script>
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -266,7 +266,7 @@ You can define the offline start button to look different from online start butt
 You can insert custom text to offline start button. You can also add any icon from [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/)
 
 ```
-<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
 <script>
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -284,7 +284,7 @@ You can define the background and text colors of the offline start button by set
 * string (white)
 
 ```
-<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
 <script>
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -298,7 +298,7 @@ You can define the background and text colors of the offline start button by set
 If you wish you can give customers the phonenumber field in contact form by setting the `contactPhone` boolean.
 
 ```
-<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
 <script>
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -314,7 +314,7 @@ If you wish you can give customers the phonenumber field in contact form by sett
 You can set different welcome texts on different pages by using the attribute welcomeTitle and welcomeText.
 
 ```
-<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
 <script>
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -331,7 +331,7 @@ You can set the timing when the customer will get agents are busy message, this 
 You can also customize the message the customer receives.
 
 ```
-<scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
 <script>
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -342,3 +342,13 @@ You can also customize the message the customer receives.
   });
 </script>
 ```
+
+## Custom CSS
+
+### Customize tab with your own CSS
+
+Tab can be customized with your own css to blend in to your site.
+Just target `#smilee-request-cobrowsing` for tab position, color, shape etc and `#smilee-welcome-text` for custom text properties such as color, font etc. Just remember to use `!important` in the CSS to overwrite the original CSS being loaded
+
+### Customize position of chatbox with CSS
+You can customize the position of chatbox with altering the property `#smilee-cobrowsing-frame`. These customizations can be bottom, left, right etc. Remember to use `!important` to overwrite the original CSS
