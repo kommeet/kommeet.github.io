@@ -4,11 +4,11 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Kommeet Documentation : ">
+    <meta name="description" content="Smilee Documentation : ">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Kommeet Documentation</title>
+    <title>Smilee Documentation</title>
   </head>
 
   <body>
@@ -16,9 +16,9 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/kommeet">View on GitHub</a>
+          <a id="forkme_banner" href="https://github.com/smileeio">View on GitHub</a>
 
-          <h1 id="project_title">Kommeet Documentation</h1>
+          <h1 id="project_title">Smilee Documentation</h1>
           <h2 id="project_tagline"></h2>
 
         </header>
@@ -28,15 +28,15 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>
-<a id="kommeet-documentation" class="anchor" href="#kommeet-documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Kommeet documentation</h1>
+<a id="smilee-documentation" class="anchor" href="#smilee-documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Smilee documentation</h1>
 
 <p><strong>Attention!</strong> Using custom init options overwrite anything chosen in the dashboard! All of these methods, attribures and hacks are subject to change and may be deprecated with one month of notice!</p>
 
 <p>If you find outdated information, think something isn't covered here or want to add some cool trick that you use please
-don't hesitate to <a href="https://www.kommeet.com">contact us through our chat on our site</a>!</p>
+don't hesitate to <a href="https://www.smilee.io">contact us through our chat on our site</a>!</p>
 
 <p>These options will let you customize the look and feel of the
-Kommeet chat.</p>
+Smilee chat.</p>
 
 <h2>
 <a id="language-settings" class="anchor" href="#language-settings" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Language settings</h2>
@@ -58,7 +58,7 @@ a locale which can be calculated from the address for Example</p>
 <h4>
 <a id="example-script-to-get-the-language" class="anchor" href="#example-script-to-get-the-language" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example script to get the Language</h4>
 
-<p>Address used in this example is <a href="http://www.kommeet.com/fi">www.kommeet.com/fi</a></p>
+<p>Address used in this example is <a href="http://www.smilee.io/fi">www.smilee.io/fi</a></p>
 
 <pre><code>var pathArray=window.location.pathname.split('/');
 var language=pathArray[1];
@@ -72,7 +72,7 @@ if(language==='en') {
 
 <p>Then the init script</p>
 
-<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+<pre><code>&lt;scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
 &lt;script&gt;
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -87,7 +87,7 @@ if(language==='en') {
 <a id="fetchpush-info-from-client-to-agent" class="anchor" href="#fetchpush-info-from-client-to-agent" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fetch/Push info from client to agent</h2>
 
 <p>Currently you can push information such as name or address information. This information will be shown
-in agent as context in userinfo panel. <em>Host address needs to match one of the domain urls in Kommeet service</em></p>
+in agent as context in userinfo panel. <em>Host address needs to match one of the domain urls in Smilee service</em></p>
 
 <h4>
 <a id="fetch-info" class="anchor" href="#fetch-info" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fetch info</h4>
@@ -108,7 +108,7 @@ in agent as context in userinfo panel. <em>Host address needs to match one of th
 }
 </code></pre>
 
-<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+<pre><code>&lt;scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
 &lt;script&gt;
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -138,7 +138,7 @@ in agent as context in userinfo panel. <em>Host address needs to match one of th
 
 <p>Example script:</p>
 
-<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+<pre><code>&lt;scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
 &lt;script&gt;
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -162,7 +162,7 @@ places with supported positions</p>
 <li>bottom-left</li>
 </ul>
 
-<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+<pre><code>&lt;scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
 &lt;script&gt;
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -175,14 +175,14 @@ places with supported positions</p>
 <a id="auto-popoup-delay" class="anchor" href="#auto-popoup-delay" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Auto popoup delay</h3>
 
 <p>Auto popup can be set to trigger differently on different sites.
-You can have it popping up in shopping cart after 20 seconds to prevent abandonement or you can make it pop up almost instantly when customer arrives to the site. It will pop up only once and if you wish to pop it up again you need to clear kommeet-autoPopupDone from sessionStorage by running</p>
+You can have it popping up in shopping cart after 20 seconds to prevent abandonement or you can make it pop up almost instantly when customer arrives to the site. It will pop up only once and if you wish to pop it up again you need to clear smilee-autoPopupDone from sessionStorage by running</p>
 
-<pre><code>sessionStorage.removeItem('kommeet-autoPopupDone')
+<pre><code>sessionStorage.removeItem('smilee-autoPopupDone')
 </code></pre>
 
 <p>To set the autopopup timeout in seconds use</p>
 
-<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+<pre><code>&lt;scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
 &lt;script&gt;
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -196,7 +196,7 @@ You can have it popping up in shopping cart after 20 seconds to prevent abandone
 
 <p>You can have different teams serving different parts of the site, for example sales team on sales site and support team on support site, just set the team name to context of the script</p>
 
-<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+<pre><code>&lt;scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
 &lt;script&gt;
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -210,7 +210,7 @@ You can have it popping up in shopping cart after 20 seconds to prevent abandone
 
 <p>With noTab property you can make the tab invisible on certain sites, if you do not wish to show it to visitors.</p>
 
-<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+<pre><code>&lt;scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
 &lt;script&gt;
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -229,7 +229,7 @@ In this example we run the "tab click" when we click a button with class <code>o
 
 <pre><code>  $(function() {
     $('.open-chat-button').on('click', function() {
-      $('#kommeet-request-cobrowsing').click();
+      $('#smilee-request-cobrowsing').click();
     });
   });
 </code></pre>
@@ -242,11 +242,11 @@ In this example we run the "tab click" when we click a button with class <code>o
 
 <p>You can insert custom text to start button. You can also add any icon from <a href="http://fortawesome.github.io/Font-Awesome/icons/">Font Awesome</a></p>
 
-<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+<pre><code>&lt;scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
 &lt;script&gt;
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
-    startButtonTitle: 'Welcome to Kommeet!',
+    startButtonTitle: 'Welcome to Smilee!',
     startButtonSymbol: ‘&lt;i class="fa fa-envelope"&gt;&lt;/i&gt;’,
   });
 &lt;/script&gt;
@@ -263,7 +263,7 @@ In this example we run the "tab click" when we click a button with class <code>o
 <li>string (white)</li>
 </ul>
 
-<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+<pre><code>&lt;scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
 &lt;script&gt;
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -282,7 +282,7 @@ In this example we run the "tab click" when we click a button with class <code>o
 <p>If you don't wish to use offline start button in certain pages you can set the init to remove the button when no agents are found
 by setting hiddenWhenNoAgents boolean.</p>
 
-<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+<pre><code>&lt;scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
 &lt;script&gt;
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -296,7 +296,7 @@ by setting hiddenWhenNoAgents boolean.</p>
 
 <p>You can define the offline start button to look different from online start button by setting this boolean value.</p>
 
-<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+<pre><code>&lt;scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
 &lt;script&gt;
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -310,7 +310,7 @@ by setting hiddenWhenNoAgents boolean.</p>
 
 <p>You can insert custom text to offline start button. You can also add any icon from <a href="http://fortawesome.github.io/Font-Awesome/icons/">Font Awesome</a></p>
 
-<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+<pre><code>&lt;scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
 &lt;script&gt;
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -331,7 +331,7 @@ by setting hiddenWhenNoAgents boolean.</p>
 <li>string (white)</li>
 </ul>
 
-<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+<pre><code>&lt;scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
 &lt;script&gt;
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -346,7 +346,7 @@ by setting hiddenWhenNoAgents boolean.</p>
 
 <p>If you wish you can give customers the phonenumber field in contact form by setting the <code>contactPhone</code> boolean.</p>
 
-<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+<pre><code>&lt;scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
 &lt;script&gt;
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -363,7 +363,7 @@ by setting hiddenWhenNoAgents boolean.</p>
 
 <p>You can set different welcome texts on different pages by using the attribute welcomeTitle and welcomeText.</p>
 
-<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+<pre><code>&lt;scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
 &lt;script&gt;
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -380,7 +380,7 @@ by setting hiddenWhenNoAgents boolean.</p>
 
 <p>You can also customize the message the customer receives.</p>
 
-<pre><code>&lt;scrip src="https://saas.kommeet.com/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
+<pre><code>&lt;scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"&gt;&lt;/script&gt;
 &lt;script&gt;
   Cobrowse.create({
     apiKey: "LQt/yocAfcWRAt...",
@@ -391,6 +391,20 @@ by setting hiddenWhenNoAgents boolean.</p>
   });
 &lt;/script&gt;
 </code></pre>
+
+<h2>
+<a id="custom-css" class="anchor" href="#custom-css" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Custom CSS</h2>
+
+<h3>
+<a id="customize-tab-with-your-own-css" class="anchor" href="#customize-tab-with-your-own-css" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Customize tab with your own CSS</h3>
+
+<p>Tab can be customized with your own css to blend in to your site.
+Just target <code>#smilee-request-cobrowsing</code> for tab position, color, shape etc and <code>#smilee-welcome-text</code> for custom text properties such as color, font etc. Just remember to use <code>!important</code> in the CSS to overwrite the original CSS being loaded</p>
+
+<h3>
+<a id="customize-position-of-chatbox-with-css" class="anchor" href="#customize-position-of-chatbox-with-css" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Customize position of chatbox with CSS</h3>
+
+<p>You can customize the position of chatbox with altering the property <code>#smilee-cobrowsing-frame</code>. These customizations can be bottom, left, right etc. Remember to use <code>!important</code> to overwrite the original CSS</p>
       </section>
     </div>
 
