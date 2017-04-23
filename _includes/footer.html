@@ -1,0 +1,36 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <ul class="contact-list">
+          <p>
+            {{ site.title | escape }}
+          </p>
+          <p>
+            For more info,
+            contact us via email <a href="mailto:{{ site.email }}">{{ site.email }}</a>, <a href="https://github.com/smileeio/smileeio.github.io/issues" target="_blank">github</a> or <a href="https://smilee.io" target="_blank">come and chat with us!</a>
+          </p>
+        </ul>
+      </div>
+
+      <div class="col">
+        <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+
+          {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+      <div class="col">
+
+      </div>
+    </div>
+  </div>
+</footer>

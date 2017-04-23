@@ -1,0 +1,28 @@
+---
+---
+
+@import "syntax-highlighting";
+@import 'footer';
+
+.quicknavlink {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.highlight {
+  background: #eef;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.lineno {
+  padding-right: 10px;
+}
+
+.latest-posts {
+  list-style: none;
+}

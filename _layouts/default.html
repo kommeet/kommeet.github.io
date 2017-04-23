@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+    <div style="margin-top: 60px;" class="container">
+      <div class="row">
+        <div class="col-3">
+          <h6>Quick Start</h6>
+          <ul>
+            {% for my_page in site.pages %}
+            {% if my_page.quickstart %}
+            <li class="quicknavlink"><a href="{{ my_page.url | relative_url }}">{{ my_page.subTitle | escape }}</a></li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+          <h6>Customize</h6>
+          <ul>
+            {% for my_page in site.pages %}
+            {% if my_page.customize %}
+            <li class="quicknavlink"><a href="{{ my_page.url | relative_url }}">{{ my_page.subTitle | escape }}</a></li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+          <h6>Advanced usage</h6>
+          <ul>
+            {% for my_page in site.pages %}
+            {% if my_page.advanced %}
+            <li class="quicknavlink"><a href="{{ my_page.url | relative_url }}">{{ my_page.subTitle | escape }}</a></li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="col-9">
+          <main class="page-content" aria-label="Content">
+            <div class="wrapper">
+              {{ content }}
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+
+  </body>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script></html>
