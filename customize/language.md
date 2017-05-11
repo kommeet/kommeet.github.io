@@ -3,7 +3,7 @@ layout: docs
 subTitle: Language
 customize: true
 ---
-## Language settings
+# Language settings
 
 ### locale
 

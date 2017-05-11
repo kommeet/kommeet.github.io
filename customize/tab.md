@@ -4,7 +4,7 @@ subTitle: Tab
 customize: true
 ---
 
-## Tab customization
+# Tab customization
 
 ### Tab location
 

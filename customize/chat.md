@@ -3,7 +3,7 @@ layout: docs
 subTitle: Chat
 customize: true
 ---
-## Chat box customizations
+# Chat box customizations
 
 ### Welcome texts
 

@@ -3,6 +3,7 @@ layout: docs
 subTitle: Fetch and push info
 advanced: true
 ---
+# Fetch and push
 ## Fetch/Push info from client to agent
 
 You can push information such as name or address information. This information will appear in agent as context in userinfo panel. *Host address needs to match one of the domain urls in Smilee service*
