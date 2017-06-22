@@ -54,3 +54,18 @@ You can enable increasing/decreasing of enduser chatbox/fontsize with adding new
   });
 </script>
 {% endhighlight %}
+
+
+### Convert any links to a clickable link
+
+Currently chat converts only links that belong to the domains of the apikey into clickable links. Adding flag `acceptAllUrls` will convert any links into a clickable links which open in a new tab. This is done in order to prevent sending malicious links to customers in accident etc.
+
+{% highlight html linenos %}
+<scrip src="https://saas.smilee.io/assets/javascripts/cobrowse.js" charset="UTF-8"></script>
+<script>
+  Cobrowse.create({
+    apiKey: "LQt/yocAfcWRAt...",
+    acceptAllUrls: true
+  });
+</script>
+{% endhighlight %}
